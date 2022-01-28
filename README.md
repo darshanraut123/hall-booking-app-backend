@@ -3,5 +3,5 @@
 
 
 ![Alt text](apis.PNG)
-![Alt text](rooms.PNG)
-![Alt text](bookings.PNG)
+![Alt text](rooms.png)
+![Alt text](bookings.png)

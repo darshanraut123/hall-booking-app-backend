@@ -17,4 +17,10 @@ app.use('/room',roomRoute);
 //Route for booking
 app.use('/booking',bookRoute);
 
+app.all('*',(req,res)=>{
+    res.json({
+        "message":"app is running"
+    });
+});
+
 app.listen(PORT,()=>{console.log("Server started at: "+PORT)})

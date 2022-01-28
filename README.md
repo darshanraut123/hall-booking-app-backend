@@ -1,6 +1,6 @@
 # hall-booking-app-backend
- Please import the exported postman collection file and verify the APIS
-
+# Documentation : https://documenter.getpostman.com/view/9160554/UVeCPnmn 
+ 
 
 ![Alt text](apis.PNG)
 ![Alt text](rooms.png)

@@ -23,4 +23,4 @@ app.all('*',(req,res)=>{
     });
 });
 
-app.listen(PORT,()=>{console.log("Server started at: "+PORT)})
+app.listen(process.env.PORT || PORT,()=>{console.log("Server started at: "+PORT)})

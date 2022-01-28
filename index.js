@@ -3,7 +3,7 @@ const res = require('express/lib/response');
 const {roomRoute,customer,rooms} = require('./route/roomRoute');
 const {bookRoute,bookings} = require('./route/bookingRoute');
 //Port on which app will run
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 //Importing all packages
 const app = express();
@@ -23,4 +23,4 @@ app.all('*',(req,res)=>{
     });
 });
 
-app.listen(process.env.PORT || PORT,()=>{console.log("Server started at: "+PORT)})
+app.listen(PORT,()=>{console.log("Server started at: "+PORT)})

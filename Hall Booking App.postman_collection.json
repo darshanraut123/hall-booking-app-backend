@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "cebd90c9-1e62-415f-92d2-cc378750762c",
+		"name": "Hall Booking App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateRoom",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"id\":\"5\",\r\n        \"roomName\":\"fifth\",\r\n        \"seatsAvailable\":\"500\",\r\n        \"amenities\":[\"soft drinks\",\"4 exits\"],\r\n        \"price\":\"5000\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/room/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"room",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AllRooms",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/room",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"room"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateBooking-overlap-date-error",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n      \"customerName\": \"Akshay\",\r\n      \"roomName\": \"first\",\r\n      \"date\":\"2022,1,5\",\r\n      \"startTime\": \"2022,1,3,11,0\",\r\n      \"endTime\": \"2022,1,6,11,0\",\r\n      \"roomId\": 1\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/booking/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"booking",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new booking success",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n      \"customerName\": \"Shivam\",\r\n      \"roomName\": \"second\",\r\n      \"date\":\"2022,1,5\",\r\n      \"startTime\": \"2022,5,16,11,0\",\r\n      \"endTime\": \"2022,5,26,11,0\",\r\n      \"roomId\": 2\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/booking/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"booking",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show all customers with bookings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/booking/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"booking",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
